@@ -1,2 +1,3 @@
 # ind-study-final-paper
-Final paper for my independent study in hardware accelerators
+All writing for my independent study in hardware accelerators,
+including my final paper.
