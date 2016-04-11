@@ -1,0 +1,22 @@
+Outline:
+The Need for Multi-Accelerator Applications in the Evaluation of
+Accelerator-Rich Architectures
+
+I. Background information
+    A. Motivation for Specialized Architectures
+        1. 
+    B. Motivation for Multi-Accelerated Apps
+
+II. My design - briefly introduce the application, then move to architecture, then
+fully describe the software.
+    A. Accelerator Architecture in Vivado
+        1. Describe the accelerators
+        2. Describe the interconnection with the Zynq processor.
+            a. Design decision such as:
+                i.   Interface? AXI. Why?
+                ii.  Sharing memory between accelerator and processor. How?
+                iii. 
+    B. Software written in Xilinx SDK
+        1. What does it do?
+        2. What path does data take between the accelerator and processor
+        blocks?
