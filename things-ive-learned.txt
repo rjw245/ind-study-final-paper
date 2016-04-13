@@ -1,0 +1,40 @@
+Things I've Learned
+1. Motivation for Specialized Architectures and my app
+	a. Moore's Law continues but power density has begun to
+increase, forcing architects to use smaller and smaller portions of the
+transistors on chip at a given time.
+	b. If we integrate specialized blocks, we can compute
+workloads using fewer transistors. The only issue is that with the accelerators built
+for such specific tasks, we will need many on chip to cover all workloads.
+	c. The issue then is how to architect around a system with a
+diverse array of specialized accelerators. Solutions have been proposed such as
+the Accelerator Store and AXRCMP.
+	d. To be able to decide which architecture performs better,
+we need multi-accelerated applications to test them.
+
+2. Getting around Vivado
+	a. I've learned a lot about Xilinx software, such as Vivado, Vivado
+HLS, and the Xilinx SDK, as well as Xilinx IP cores.
+	b. I am confident in my ability to work with the AXI bus protocol. This
+includes creating custom peripherals and fitting a custom IP to work with AXI.
+	c. I am confident in my ability to program AXI peripherals from the
+Xilinx SDK.
+
+3. How to go about doing research
+	a. I've also learned this from EE194, but I've begun to pick up how to
+go about critiquing research papers. Too often I start reading a paper, taking
+its findings as the gospel because surely these people must know what they're
+doing! But I have started to take a critical eye and acknowledge that these
+researchers are fallible and their findings almost always have at least one
+weakness, or raise some other question.
+
+4. Architecting a System
+	a. Most of my work to date aside from educating myself on accelerator
+research has been on setting up an architecture for the Zynq processor to
+control multiple IPs.
+	b. I started small and was able to connect a simple adder via AXI to the
+Zynq processor and was able to control it from software.
+	c. From there I moved on to architecting a larger IP - the strided FFT
+from MachSuite
+	d. I learned the interface that the FFT expects and designed a way for
+the Zynq processor to share memory with the FFT around its interface.

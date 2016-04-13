@@ -1,0 +1,40 @@
+~~~~~ Security ~~~~~
+1. iPhone encryption side-channel attack
+    - Info: http://www.nytimes.com/interactive/2016/03/03/technology/apple-iphone-fbi-fight-explained.html?_r=0
+    - With the recent conflict between Apple and the FBI over encryption on the
+      iPhone, there will be heightened interest in the security of mobile
+      phones.
+    - Perhaps a side-channel attack is possible, such as measuring
+      the temperature of the section of the chip dedicated to
+      encryption/decryption. But what would they look for?
+    - Does the length of time AES encryption is running (or some other
+      encryption) tell you information you wouldn't otherwise have about the
+      correctness of your key? i.e. How close it is to the right key?
+    - Well, how does AES work?
+      http://www.moserware.com/2009/09/stick-figure-guide-to-advanced.html
+    - On second thought, this might not be the best application for Dave's work.
+      Thermal side-channel attacks are best for determining if hardware is on or
+      off over long time scales. It would not be feasible to use temperature to
+      measure if an AES engine runs 1ms longer.
+
+2. derp
+
+
+~~~~~ Many-Acc. Memories ~~~~~
+This project is interested in the interactions between many accelerators. I
+should design an application that combines accelerators in a variety of
+datapaths to effectively evaluate Dave's memory infrastructure. This design
+needs to be more explicit than the security application. I need to describe in
+detail how data flows from one accelerator to another, and at what granularity.
+I should also think about how many accelerators there are in the system and how
+they might need to be shared among multiple threads, as this could be an
+interesting hurdle for Dave's system.
+
+1. Web server workload acceleration
+    - A web server that uses hardware acceleration would have to share
+      accelerators as resources between many parallel threads trying to serve
+      clients data.
+    - Posssible Accelerators:
+        - SSL accelerator, (and other encryption)
+        - Database accelerator? Probably not feasible, needs to access a disk so
+          it's limited by the speed of the storage
