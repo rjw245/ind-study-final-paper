@@ -2,6 +2,50 @@ Outline:
 The Need for Multi-Accelerator Applications in the Evaluation of
 Accelerator-Rich Architectures
 
+Intro Summary: The power constraints of today's computers will force architects to
+integrate specialized accelerators on chip in large numbers. This shift demands
+new architectures that can coordinate hundreds and even thousands of these
+specialized blocks. To convincingly evaluate these experimental architectures,
+researchers will need a catalog of accelerator-rich applications.
+
+Thesis: Researchers will need to test their work with accelerator-rich
+applications so that they can fully explore the interactions that occur in
+accelerator-rich systems. To this end, I have begun development of an
+accelerator-rich application for use in Dr. Mark Hempstead's computer
+architecture lab at Tufts University.
+
+I.   The Motivation for Specialization
+II.  Challenges of an Accelerator Rich Architecture (what sorts of issues arise
+from accelerators that need to be solved by the architecture?)
+    A. Streaming to avoid a bottleneck imposed by the CPU.
+    B. Wasted area on unused memory (must share it)
+    C. Sharing accelerators between parallel threads
+    D. How to expose the accelerator to software
+III. The Value of Accelerator-Rich Applications for Evaluating Architectures
+    A. Examples of applications that I have read about:
+        1. Mention the robotic bee (any insight it has provided on architecture
+        design?)
+        2. The application from the Accelerator Store
+            i. Discuss how they used the application to validate their design,
+            and how validation was possible because it used many accelerators.
+        3. AXR-CMP: Architecture Support in Accelerator-Rich CMPs tests with
+        applications that use several accelerators.
+IV. Requirements of an Accelerator-Rich Application and Its Underlying Testbed
+Architecture
+    A. Must Be Scalable to Hundreds of Accelerators
+    B. Must provide a generic interface that can be fitted to any accelerator IP.
+    C. Must allow for accelerator streaming
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 I. Background information
     A. Motivation for Specialized Architectures
         1. 
