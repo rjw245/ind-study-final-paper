@@ -14,7 +14,20 @@ accelerator-rich systems. To this end, I have begun development of an
 accelerator-rich application for use in Dr. Mark Hempstead's computer
 architecture lab at Tufts University.
 
-I.   The Motivation for Specialization
+I.   The Motivation for Specialization and Accelerator-Rich Architectures
+    A. End of Dennard Scaling --> Dark silicon
+        1. Explain the phenomena
+        2. Cite statistics that show the trend toward dark silicon
+        3. Discuss ways of getting around the problem
+            a. Shrinking, dimming, specialization, new transistor tech
+    B. Approaches to Specialization
+        1. Examples of systems that have already adopted specialization, and the
+        results:
+            a. The iPhone processors over time have incorporated many
+            accelerators ("toward cache friendly hardware accelerators")
+            b. The Cell microprocessor from Sony, Toshiba, and IBM integrates
+            coprocessors with a Power CPU and is used in the PlayStation 3.
+        2. Computers need to become highly specialized over the next few years.
 II.  Challenges of an Accelerator Rich Architecture (what sorts of issues arise
 from accelerators that need to be solved by the architecture?)
     A. Streaming to avoid a bottleneck imposed by the CPU.
@@ -26,7 +39,7 @@ III. The Value of Accelerator-Rich Applications for Evaluating Architectures
         1. Mention the robotic bee (any insight it has provided on architecture
         design?)
         2. The application from the Accelerator Store
-            i. Discuss how they used the application to validate their design,
+            a. Discuss how they used the application to validate their design,
             and how validation was possible because it used many accelerators.
         3. AXR-CMP: Architecture Support in Accelerator-Rich CMPs tests with
         applications that use several accelerators.
