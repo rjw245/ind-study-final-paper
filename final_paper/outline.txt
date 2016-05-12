@@ -14,6 +14,8 @@ accelerator-rich systems. To this end, I have begun development of an
 accelerator-rich application for use in Dr. Mark Hempstead's computer
 architecture lab at Tufts University.
 
+
+INTRO
 I.   The Motivation for Specialization and Accelerator-Rich Architectures
     A. End of Dennard Scaling --> Dark silicon
         1. Explain the phenomena
@@ -26,8 +28,10 @@ I.   The Motivation for Specialization and Accelerator-Rich Architectures
             a. The iPhone processors over time have incorporated many
             accelerators ("toward cache friendly hardware accelerators")
             b. The Cell microprocessor from Sony, Toshiba, and IBM integrates
-            coprocessors with a Power CPU and is used in the PlayStation 3.
-        2. Computers need to become highly specialized over the next few years.
+            specialized coprocessors with a PowerPC core and is used in the
+            PlayStation 3.
+        2. Computers need to become highly specialized over the next few years
+        which poses architectural challenges to researchers.
 II.  Challenges of an Accelerator Rich Architecture (what sorts of issues arise
 from accelerators that need to be solved by the architecture?)
     A. Streaming to avoid a bottleneck imposed by the CPU.
@@ -49,12 +53,26 @@ Architecture
     B. Must provide a generic interface that can be fitted to any accelerator IP.
     C. Must allow for accelerator streaming
 
+TECHNICAL DISCUSSION
+I. Tools used
 
+II. Describe the final system block diagram from Vivado
 
+III. Describe the software written to control blocks in the system diagram.
 
+RESULTS
+I. Present speedup of hardware FFT over software
+	A. When processor copies data synchronously
+    B. When DMA copies data synchronously
+    C. When DMA copies data asynchronously
+    
+II. Modularity of Interconnect
 
-
-
+PROJECT EXECUTION EVALUATION
+I. How much did I accomplish?
+	A. Link to my blog posts
+II. What was I unable to complete?
+III. Why was I unable to complete these things? What would I do differently next time?
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

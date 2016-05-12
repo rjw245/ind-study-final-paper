@@ -1,0 +1,12 @@
+\section{Technical Discussion}
+In this section, I will discuss the details of my many-accelerator architecture. This architecture is intended to be instantiated on a Zynq-7000 All Programmable SoC~\cite{zynq}. These systems-on-chip contain a general-purpose ARM processor and reconfigurable FPGA fabric. Developers can instantiate custom hardware in the FPGA for the processor to use. In this project, a ZedBoard was used~\cite{zedboard}.
+
+I used Vivado v2015.4 to design my architecture. The block diagram of the architecture is shown in Appendix~\ref{app:block_diagram}. The diagram consists of several key blocks. These are:
+\begin{itemize}
+\item \textbf{Zynq Processing System:} The general-purpose processor in the Zynq SoC. Exposes a clock, reset, and AXI port to the FPGA fabric.
+\item \textbf{AXI Central DMA:} Used to move data between the processor's main memory and the three FFT accelerators.
+\item \textbf{AXI Interconnect Crossbars:} There are several AXI crossbars in the design which establish a master-slave hierarchy. More on this later in this section.
+\end{itemize}
+
+\subsection{Master-Slave Hierarchy}
+Talk about how the Zynq has control of the DMA has control of the FFT. But also, the Zynq can circumvent the DMA and access the memories of each accelerator directly.

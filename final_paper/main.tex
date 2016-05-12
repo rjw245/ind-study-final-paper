@@ -1,0 +1,88 @@
+% Document template based on LNCS, adapted by Matt Welsh <mdw@cs.berkeley.edu> and Mark Hempstead<mhempstead@coe.drexel.edu>
+
+\documentclass{article}
+\usepackage{program}
+\usepackage{acm-style10} % ACM proceedings formatting
+\usepackage{times}       % Use Adobe Times font set
+\usepackage{epsfig,twocolumn}
+\usepackage{lipsum}
+\usepackage{url}
+\usepackage[english]{babel} % mdw: Required to get good hyphenation on RH6.0
+                            % (fixed in RH6.1)
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{color}
+\usepackage{soul}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{appendix}
+\usepackage{lscape}
+
+% Source code listing setup
+\usepackage{listings}
+\lstset{language=C}
+\lstset{
+	language=C,
+    frame=L,
+    captionpos=b,
+    tabsize=2,
+    basicstyle=\ttfamily\scriptsize,
+    breaklines=true,
+    showstringspaces=false,
+}
+
+
+% DO NOT EDIT THE BELOW BLOCK OF CODE
+\def\dsp{\def\baselinestretch{1.10}}
+\dsp
+\newcommand{\XXXnote}[1]{{\bf\color{red} XXX: #1}}
+\setlength{\textheight}{9.25in}
+\setlength{\columnsep}{0.33in}
+\setlength{\textwidth}{7.4in}
+\setlength{\footskip}{0.0in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.0in}
+\setlength{\oddsidemargin}{-.45in}
+\setlength{\parindent}{1pc}
+\pagestyle{empty}
+\begin{document}
+\date{\aufnt May 13, 2016}
+
+%%%%%%%%%%%% THIS IS WHERE WE PUT IN THE TITLE AND AUTHORS %%%%%%%%%%%%
+
+% Title here
+\title{\ttlfnt Designing Architecture for Multi-Accelerator Applications}
+
+% Author names, affiliations, and e-mail below
+\author{{\aufnt Riley Wood} \\ 
+{\affaddr Computer Architecture Lab} \\
+{\affaddr Tufts University} \\ 
+{\affaddr rjw245@gmail.com}}
+
+\maketitle
+%\copyrightspace
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%  ABSTRACT GOES HERE %%%%%%%%%%%%%%
+
+\begin{abstract}
+This paper summarizes my research on hardware accelerators and details the work I have done regarding the development of an architecture to support multi-accelerator applications. Computer architects are preparing to confront an impending limit on the number of transistors on chip that can be used at any given time. This utilization wall will limit the extent to which computers can benefit from increasing transistor counts. Specializing the transistors on chip is one solution which seems to be gaining traction among the research community and in industry. As researchers pursue this option, they have begun to develop new accelerator-rich architectures (ARAs) to handle the challenges posed by specialization. For researchers to conclusively evaluate and compare these architectures, they will need a catalog of applications which use many accelerators. This work focuses on the design of an architecture upon which such applications can be built. The architecture is developed for the Zynq-7000 line of systems-on-chip and serves as a baseline architecture for ARA research. This work was conducted during the spring of 2016 under the supervision of Professor Mark Hempstead as part of an independent study in hardware accelerators.
+\end{abstract}
+
+%%%%%%%%%%%%%  BODY OF PAPER GOES HERE %%%%%%%%%%%%%%
+
+\input{intro}
+\input{technical}
+\input{evaluation}
+\input{proj_exec_eval}
+\input{appendix}
+
+%%%%%%%%%%%%%  THIS IS WHERE THE BIBLIOGRAPHY GOES %%%%%%%%%
+
+% Change the word "template" below to the name of the .bib file you use
+\begin{small}
+\bibliographystyle{abbrv} \bibliography{main}
+\end{small}
+
+\end{document}
+
