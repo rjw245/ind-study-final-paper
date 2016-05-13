@@ -38,3 +38,4 @@ interesting hurdle for Dave's system.
         - SSL accelerator, (and other encryption)
         - Database accelerator? Probably not feasible, needs to access a disk so
           it's limited by the speed of the storage
+        - Accelerators should be able to talk directly to the network interface
